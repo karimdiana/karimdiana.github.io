@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,401,400,501,701,300&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/jpg" href="logo_diana.png">
+    <link rel="icon" type="image/jpg" href="assets/logo_diana.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         * {
             font-family: 'Satoshi', sans-serif;
@@ -26,7 +27,7 @@
         <nav class="nav-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="logo_diana.png" alt="DK" class="logo-image">
+                    <img src="/assets/logo_diana.png" alt="DK" class="logo-image">
                 </a>
             </div>
             <ul class="nav-links">
@@ -41,114 +42,147 @@
     <main id="home" class="introduction-section">
         <div class="introduction-content">
             <div class="profile-container">
-                <!-- Left Box -->
-                <div class="intro-box left-box">
+                <div class="intro-box">
                     <div class="box-header">
                         <div class="profile-intro">
-                            <img src="Apple_Diana_Computer.PNG" alt="Profile" class="profile-pic">
+                            <img src="/assets/Apple_Diana_Computer.PNG" alt="Profile" class="profile-pic">
                             <div class="profile-details">
-                                <h2>Hey, I'm Diana.</h2>
+                                <h2>Hey, <span>I'm Diana</span>.</h2>
                                 <p>Computer Scientist at Purdue University</p>
                             </div>
                         </div>
                         <div class="profile-actions">
-                            <a href="https://www.linkedin.com/in/karimdiana/" class="linkedin-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="mailto:karimdianaa@outlook.com" class="get-in-touch">Get in Touch</a>
+                            <a href="mailto:karimdianaa@outlook.com?subject=[Company]%20-%20Let's%20Talk&body=Hi%20Diana,%0D%0A%0D%0AI've%20checked%20out%20your%20portfolio%20and%20would%20love%20to%20discuss%20potential%20opportunities.%0D%0A%0D%0ABest%20regards" class="get-in-touch">Get in Touch</a>
                         </div>
                     </div>
-                    <div class="tagline">
-                        <h1>I design. I build.<br>
-                            Software Engineer with a<br>
-                            passion for <span class="gradient-text">UX/UI Design</span>.</h1>
-                    </div>
-                    <div class="building-at">
-                        <p>Building what I love at <a href="#" class="gradient-text">@purdue</a></p>
-                    </div>
-                </div>
-
-                <!-- Right Box -->
-                <div class="intro-box right-box">
                     
-                    <img src="Apple_Diana_Main.PNG" alt="Profile Memoji" class="memoji">
+                    <div class="tagline">
+                        <h1>I code. I build. <span class="gradient-text">I design.</span></h1>
+                        <div class="building-at">
+                            <p>Building what I love at <a href="#">@purdue</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <section class="tech-stack-section">
-                <h2>My Stack</h2>
-                <div class="tech-slider">
-                    <!-- First row -->
-                    <div class="slider-track track1">
-                        <div class="slide">
-                            <i class="fab fa-js" style="color: #F7DF1E;"></i>
-                            <span>JavaScript</span>
+
+            <!-- Add divider between sections -->
+            <div class="section-divider">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <section class="about-section">
+                <div class="about-container">
+                    <div class="about-text">
+                        <h2>Who am I<span class="question-mark">?</span></h2>
+                        <p class="about-intro">A <span class="highlight">passionate computer scientist</span> with a love for creative problem-solving and innovative design.</p>
+                        
+                        <div class="about-description">
+                            <p>Currently pursuing Computer Science at <span class="highlight">Purdue University</span>, where I blend technical expertise with creative design thinking.</p>
                         </div>
-                        <div class="slide">
-                            <i class="fab fa-react" style="color: #61DAFB;"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="slide">
-                            <i class="fab fa-python" style="color: #3776AB;"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="slide">
-                            <i class="fab fa-html5" style="color: #E34F26;"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="slide">
-                            <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <!-- Duplicate for infinite scroll -->
-                        <div class="slide">
-                            <i class="fab fa-js" style="color: #F7DF1E;"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="slide">
-                            <i class="fab fa-react" style="color: #61DAFB;"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="slide">
-                            <i class="fab fa-python" style="color: #3776AB;"></i>
-                            <span>Python</span>
+                        
+                        <div class="about-categories">
+                            <div class="category">
+                                <h3>Core Skills</h3>
+                                <div class="course-list">
+                                    <span class="course-tag">Data Structures</span>
+                                    <span class="course-tag">Algorithms</span>
+                                    <span class="course-tag">Systems Programming</span>
+                                    <span class="course-tag">Web Development</span>
+                                    <span class="course-tag">UI/UX Design</span>
+                                    <span class="course-tag">Machine Learning</span>
+                                </div>
+                            </div>
+                            
+                            <div class="category">
+                                <h3>Passions</h3>
+                                <div class="interests-list">
+                                    <span class="interest-tag">Problem Solving</span>
+                                    <span class="interest-tag">Creative Coding</span>
+                                    <span class="interest-tag">User Experience</span>
+                                    <span class="interest-tag">Visual Design</span>
+                                    <span class="interest-tag">Innovation</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Second row (starts with delay) -->
-                    <div class="slider-track track2">
-                        <div class="slide">
-                            <i class="devicon-csharp-plain" style="color: #239120;"></i>
-                            <span>C#</span>
+                    <div class="about-image">
+                        <img src="/assets/Apple_Diana_Main.PNG" alt="Diana's Memoji" class="about-memoji">
+                    </div>
+                </div>
+            </section>
+            <section class="tech-stack-section">
+                <h2>My Stack</h2>
+                <div class="tech-grid-container">
+                    <!-- First Row - Programming Languages (7 items) -->
+                    <div class="tech-row">
+                        <div class="tech-item">
+                            <i class="fab fa-js tech-icon" style="color: #F7DF1E;"></i>
+                            <span class="tech-name">JavaScript</span>
                         </div>
-                        <div class="slide">
-                            <i class="devicon-cplusplus-plain" style="color: #00599C;"></i>
-                            <span>C++</span>
+                        <div class="tech-item">
+                            <i class="fab fa-python tech-icon" style="color: #3776AB;"></i>
+                            <span class="tech-name">Python</span>
                         </div>
-                        <div class="slide">
-                            <i class="fab fa-node" style="color: #339933;"></i>
-                            <span>Node.js</span>
+                        <div class="tech-item">
+                            <i class="devicon-cplusplus-plain tech-icon" style="color: #00599C;"></i>
+                            <span class="tech-name">C++</span>
                         </div>
-                        <div class="slide">
-                            <img src="blazor.svg" alt="Blazor" style="width: 4.5rem; height: 4.5rem;">
-                            <span>Blazor</span>
+                        <div class="tech-item">
+                            <i class="devicon-csharp-plain tech-icon" style="color: #239120;"></i>
+                            <span class="tech-name">C#</span>
                         </div>
-                        <div class="slide">
-                            <i class="fab fa-git-alt" style="color: #F05032;"></i>
-                            <span>Git</span>
+                        <div class="tech-item">
+                            <i class="fab fa-react tech-icon" style="color: #61DAFB;"></i>
+                            <span class="tech-name">React</span>
                         </div>
-                        <!-- Duplicate for infinite scroll -->
-                        <div class="slide">
-                            <i class="devicon-csharp-plain" style="color: #239120;"></i>
-                            <span>C#</span>
+                        <div class="tech-item">
+                            <i class="fab fa-html5 tech-icon" style="color: #E34F26;"></i>
+                            <span class="tech-name">HTML5</span>
                         </div>
-                        <div class="slide">
-                            <i class="devicon-cplusplus-plain" style="color: #00599C;"></i>
-                            <span>C++</span>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt tech-icon" style="color: #1572B6;"></i>
+                            <span class="tech-name">CSS3</span>
                         </div>
-                        <div class="slide">
-                            <i class="fab fa-node" style="color: #339933;"></i>
-                            <span>Node.js</span>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="tech-item">
+                            <i class="fab fa-js tech-icon" style="color: #F7DF1E;"></i>
+                            <span class="tech-name">JavaScript</span>
                         </div>
+                        <!-- Add all duplicates... -->
+                    </div>
+                    
+                    <!-- Second Row - Tools (6 items) -->
+                    <div class="tech-row">
+                        <div class="tech-item">
+                            <i class="fab fa-aws tech-icon" style="color: #FF9900;"></i>
+                            <span class="tech-name">AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker tech-icon" style="color: #2496ED;"></i>
+                            <span class="tech-name">Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-github tech-icon" style="color: #ffffff;"></i>
+                            <span class="tech-name">GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-linux tech-icon" style="color: #FCC624;"></i>
+                            <span class="tech-name">Linux</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-figma-plain tech-icon" style="color: #F24E1E;"></i>
+                            <span class="tech-name">Figma</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="devicon-vscode-plain tech-icon" style="color: #007ACC;"></i>
+                            <span class="tech-name">VS Code</span>
+                        </div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="tech-item">
+                            <i class="fab fa-aws tech-icon" style="color: #FF9900;"></i>
+                            <span class="tech-name">AWS</span>
+                        </div>
+                        <!-- Add all duplicates... -->
                     </div>
                 </div>
             </section>
@@ -160,6 +194,7 @@
             <h2>My Work</h2>
             <div class="projects-grid">
                 <a href="projects/neural-game.html" class="project-card">
+                    <img src="path/to/neural-game-image.jpg" alt="Interactive Neural Network" class="project-image">
                     <div class="project-content">
                         <h3>Interactive Neural Network</h3>
                         <p>Beautiful visualization of neural connections with particle physics</p>
@@ -172,6 +207,7 @@
                 </a>
 
                 <a href="projects/nurai-labs.html" class="project-card">
+                    <img src="path/to/nurai-labs-image.jpg" alt="Nurai Labs UI Redesign" class="project-image">
                     <div class="project-content">
                         <h3>Nurai Labs UI Redesign</h3>
                         <p>Modern UI/UX redesign for Azerbaijani tech company</p>
@@ -184,6 +220,7 @@
                 </a>
 
                 <a href="projects/parkview.html" class="project-card">
+                    <img src="path/to/parkview-image.jpg" alt="Parkview PDF Processing" class="project-image">
                     <div class="project-content">
                         <h3>Parkview PDF Processing</h3>
                         <p>Gene mutations analysis tool with interactive visualizations</p>
@@ -196,6 +233,7 @@
                 </a>
 
                 <a href="projects/psych-testing.html" class="project-card">
+                    <img src="path/to/psych-testing-image.jpg" alt="Psychological Testing Platform" class="project-image">
                     <div class="project-content">
                         <h3>Psychological Testing Platform</h3>
                         <p>Web-based psychological assessment and analysis tools</p>
@@ -208,6 +246,7 @@
                 </a>
 
                 <a href="projects/vaid.html" class="project-card">
+                    <img src="path/to/vaid-image.jpg" alt="Vaid Volunteer Platform" class="project-image">
                     <div class="project-content">
                         <h3>Vaid Volunteer Platform</h3>
                         <p>Connecting volunteers with opportunities in Kazakhstan</p>
@@ -220,6 +259,7 @@
                 </a>
 
                 <a href="projects/ecommerce.html" class="project-card">
+                    <img src="path/to/ecommerce-image.jpg" alt="Fashion E-Commerce" class="project-image">
                     <div class="project-content">
                         <h3>Fashion E-Commerce</h3>
                         <p>Full-featured online fashion store with secure payments</p>
@@ -236,28 +276,37 @@
     </section>
 
     <section class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
-            <form class="contact-form">
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/karimdiana/" class="linkedin-button">
-                    <i class="fab fa-linkedin"></i>
-
-                    Connect on LinkedIn
+        <div class="container">
+            <div class="contact-container">
+                <h2>Let's Connect</h2>
+                <p>Interested in working together? I'd love to hear from you.</p>
+                <a href="mailto:karimdianaa@outlook.com?subject=[Company]%20-%20Let's%20Talk&body=Hi%20Diana,%0D%0A%0D%0AI've%20checked%20out%20your%20portfolio%20and%20would%20love%20to%20discuss%20potential%20opportunities.%0D%0A%0D%0ABest%20regards" class="contact-button">
+                    <i class="fas fa-envelope"></i>
+                    Get in Touch
                 </a>
             </div>
         </div>
     </section>
 
-
-  
-
-   
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/karimdiana" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/karimdiana" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:karimdianaa@outlook.com?subject=[Company]%20-%20Let's%20Talk&body=Hi%20Diana,%0D%0A%0D%0AI've%20checked%20out%20your%20portfolio%20and%20would%20love%20to%20discuss%20potential%20opportunities.%0D%0A%0D%0ABest%20regards">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <p>© 2025 Diana Karim. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
