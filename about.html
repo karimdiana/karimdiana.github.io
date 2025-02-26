@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Diana's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Same header as main page -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">DK</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="index.html#work">My Work</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-section">
+        <div class="about-container">
+            <div class="about-header">
+                <h1>About Me</h1>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image-section">
+                    <img src="almaty.jpg" alt="Almaty" class="city-image">
+                    <div class="location-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Almaty, Kazakhstan → West Lafayette, IN
+                    </div>
+                </div>
+
+                <div class="about-cards">
+                    <div class="about-card gradient-1">
+                        <h2>Background</h2>
+                        <p>Hello! I'm Diana Karim from Almaty, Kazakhstan. Currently pursuing Computer Science and Mathematics at Purdue University...</p>
+                    </div>
+
+                    <div class="about-card gradient-2">
+                        <h2>Journey</h2>
+                        <p>Passionate about creating intuitive and efficient solutions. I love designing and building websites...</p>
+                    </div>
+
+                    <div class="about-card gradient-3">
+                        <h2>Interests</h2>
+                        <div class="interests-grid">
+                            <span>UI/UX Design</span>
+                            <span>Web Development</span>
+                            <span>Problem Solving</span>
+                            <!-- Add more interests -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <a href="assets/resume_DianaKarim.pdf" 
+                   download="resume_DianaKarim.pdf" 
+                   class="resume-button"
+                   onclick="handleDownload(event)">
+                    <i class="fas fa-file-download"></i>
+                    <span>Download Resume</span>
+                    <div class="button-effect"></div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    function handleDownload(e) {
+        if (!fileExists('assets/resume_DianaKarim.pdf')) {
+            e.preventDefault();
+            alert('Resume is being updated. Please contact me for the latest version!');
+        }
+    }
+
+    function fileExists(url) {
+        var http = new XMLHttpRequest();
+        http.open('HEAD', url, false);
+        try {
+            http.send();
+            return http.status !== 404;
+        } catch(e) {
+            return false;
+        }
+    }
+    </script>
+</body>
+</html> 

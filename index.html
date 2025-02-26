@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,401,400,501,701,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Satoshi', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#home">DK</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home" class="introduction-section">
+        <div class="introduction-content">
+            <div class="profile-container">
+                <!-- Left Box -->
+                <div class="intro-box left-box">
+                    <div class="box-header">
+                        <div class="profile-intro">
+                            <img src="Apple_Diana_Computer.PNG" alt="Profile" class="profile-pic">
+                            <div class="profile-details">
+                                <h2>Hey, I'm Diana.</h2>
+                                <p>Computer Scientist at Purdue University</p>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <a href="https://www.linkedin.com/in/karimdiana/" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:karimdianaa@outlook.com" class="get-in-touch">Get in Touch</a>
+                        </div>
+                    </div>
+                    <div class="tagline">
+                        <h1>I design. I build.<br>
+                            Software Engineer with a<br>
+                            passion for <span class="gradient-text">UX/UI Design</span>.</h1>
+                    </div>
+                    <div class="building-at">
+                        <p>Building what I love at <a href="#" class="gradient-text">@purdue</a></p>
+                    </div>
+                </div>
+
+                <!-- Right Box -->
+                <div class="intro-box right-box">
+                    
+                    <img src="Apple_Diana_Main.PNG" alt="Profile Memoji" class="memoji">
+                </div>
+            </div>
+            <section class="tech-stack-section">
+                <h2>My Stack</h2>
+                <div class="tech-slider">
+                    <!-- First row -->
+                    <div class="slider-track track1">
+                        <div class="slide">
+                            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-react" style="color: #61DAFB;"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-python" style="color: #3776AB;"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-html5" style="color: #E34F26;"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <!-- Duplicate for infinite scroll -->
+                        <div class="slide">
+                            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-react" style="color: #61DAFB;"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-python" style="color: #3776AB;"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Second row (starts with delay) -->
+                    <div class="slider-track track2">
+                        <div class="slide">
+                            <i class="devicon-csharp-plain" style="color: #239120;"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="slide">
+                            <i class="devicon-cplusplus-plain" style="color: #00599C;"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-node" style="color: #339933;"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="slide">
+                            <img src="blazor.svg" alt="Blazor" style="width: 4.5rem; height: 4.5rem;">
+                            <span>Blazor</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-git-alt" style="color: #F05032;"></i>
+                            <span>Git</span>
+                        </div>
+                        <!-- Duplicate for infinite scroll -->
+                        <div class="slide">
+                            <i class="devicon-csharp-plain" style="color: #239120;"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="slide">
+                            <i class="devicon-cplusplus-plain" style="color: #00599C;"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="slide">
+                            <i class="fab fa-node" style="color: #339933;"></i>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="work" class="projects-section">
+        <div class="projects-container">
+            <h2>My Work</h2>
+            <div class="projects-grid">
+                <a href="projects/project1.html" class="project-card">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio website with modern UI/UX design</p>
+                        <div class="tech-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects/project2.html" class="project-card">
+                    <div class="project-content">
+                        <h3>Task Manager</h3>
+                        <p>Full-stack task management application</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects/project3.html" class="project-card">
+                    <div class="project-content">
+                        <h3>Weather App</h3>
+                        <p>Real-time weather tracking application</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Weather API</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects/project4.html" class="project-card">
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Online shopping platform with payment integration</p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/karimdiana/" class="linkedin-button">
+                    <img src="linkedin_logo.png" alt="LinkedIn">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="gradient-text">Building Digital Experiences</h1>
+                <p>Computer Science Student & UI/UX Developer</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="primary-button">Get in Touch</a>
+                    <a href="#work" class="secondary-button">View My Work</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-preview">
+                    <pre><code>
+class Diana {
+    constructor() {
+        this.skills = ['UI/UX', 'Web Dev', 'Problem Solving'];
+        this.passion = 'Creating Beautiful Experiences';
+        this.status = 'Open to Opportunities';
+    }
+
+    createMagic() {
+        return '✨ Let's build something amazing!';
+    }
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hire-me-section">
+        <div class="hire-me-container">
+            <h2>Why Work With Me?</h2>
+            <div class="skills-showcase">
+                <!-- Interactive skills showcase -->
+                <div class="skill-card" data-skill="UI/UX">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and beautiful user experiences</p>
+                </div>
+                <!-- Add more skill cards -->
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
