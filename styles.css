@@ -73,7 +73,7 @@ body {
 }
 
 .introduction-section {
-    padding-top: 100px;
+    padding-top: 120px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -95,6 +95,7 @@ body {
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 400px;
 }
 
 .left-box {
@@ -174,11 +175,28 @@ body {
 }
 
 .right-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    aspect-ratio: auto;
+    height: 100%;
+    position: relative;
     overflow: hidden;
+}
+
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 59, 255, 0.1), rgba(92, 36, 255, 0.1));
+    filter: blur(30px);
+    animation: moveGradient 8s ease infinite;
+}
+
+@keyframes moveGradient {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10%, 10%) rotate(90deg); }
+    50% { transform: translate(0, 20%) rotate(180deg); }
+    75% { transform: translate(-10%, 10%) rotate(270deg); }
 }
 
 .memoji {
@@ -564,32 +582,37 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
+    padding: 15px 40px;
     transition: all 0.3s ease;
-    padding: 20px 0;
 }
 
-/* Header style when scrolled */
 .header-scrolled {
     background: rgba(10, 10, 15, 0.8);
     backdrop-filter: blur(10px);
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Add this if you want rounded corners when scrolled */
-.header-scrolled .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    border-radius: 0 0 20px 20px;
+    margin: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+}
+
+.logo-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Add padding to main content to prevent header overlap */
+main {
+    padding-top: 100px;
 }
 
 .logo a {
@@ -1072,7 +1095,7 @@ body {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 24px;
-    padding: 50px 20px;
+    padding: 30px 15px;  /* Reduced padding */
     overflow: hidden;
     backdrop-filter: blur(10px);
     position: relative;
@@ -1104,7 +1127,7 @@ body {
 
 .slider-track {
     position: relative;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 .slider-track::after {
@@ -1134,7 +1157,7 @@ body {
 }
 
 .slide i {
-    font-size: 4rem;
+    font-size: 2.8rem;  /* Smaller icons */
     margin-bottom: 15px;
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
 }
@@ -1176,8 +1199,8 @@ body {
 }
 
 .slider-track {
-    gap: 60px; /* Reduced gap */
-    padding: 20px 0;
+    gap: 40px;  /* Reduced gap */
+    padding: 15px 0;
 }
 
 /* Gradient text style for section headings */
@@ -1271,4 +1294,54 @@ body {
     100% {
         transform: translateX(100%);
     }
+}
+
+/* Remove unnecessary sections */
+.code-window,
+.building-digital,
+.hire-me-section {
+    display: none;
+}
+
+.project-showcase {
+    margin: 40px 0;
+}
+
+.project-preview {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.preview-link {
+    display: block;
+    position: relative;
+}
+
+.preview-link img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.preview-link:hover img {
+    transform: scale(1.05);
+}
+
+.preview-link:hover .preview-overlay {
+    opacity: 1;
 }

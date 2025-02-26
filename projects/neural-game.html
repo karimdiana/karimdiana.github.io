@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Game - Diana's Projects</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,401,400,501,701,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="animated-background">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
+    </div>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo_diana.png" alt="DK" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#work">My Work</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <div class="project-container">
+            <div class="project-header">
+                <h1>Interactive Neural Network</h1>
+                <div class="project-links">
+                    <a href="[GITHUB_URL]" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="game-container">
+                <canvas id="gameCanvas"></canvas>
+                <div class="game-controls">
+                    <button class="game-button" id="startGame">Start</button>
+                    <button class="game-button" id="resetGame">Reset</button>
+                </div>
+                <div class="game-stats">
+                    <span id="particleCount">Particles: 0</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-overview">
+                    <h2>Overview</h2>
+                    <p>An interactive visualization that demonstrates neural network principles through particle physics. Create beautiful patterns by interacting with the canvas.</p>
+                </div>
+                
+                <div class="project-features">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>Interactive particle creation</li>
+                        <li>Physics-based movements</li>
+                        <li>Dynamic neural connections</li>
+                        <li>Color gradient effects</li>
+                        <li>Real-time particle stats</li>
+                    </ul>
+                </div>
+                
+                <div class="project-tech">
+                    <h2>Technologies Used</h2>
+                    <div class="tech-tags">
+                        <span>JavaScript</span>
+                        <span>Canvas API</span>
+                        <span>Physics</span>
+                        <span>WebGL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Game initialization code
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId;
+        let isGameRunning = false;
+
+        // Set canvas size
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Particle class
+        class Particle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.size = Math.random() * 3 + 2;
+                this.speedX = Math.random() * 4 - 2;
+                this.speedY = Math.random() * 4 - 2;
+                this.color = `hsl(${Math.random() * 60 + 280}, 100%, 50%)`;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+        }
+
+        // Animation loop
+        function animate() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            document.getElementById('particleCount').textContent = `Particles: ${particles.length}`;
+            
+            if (isGameRunning) {
+                animationId = requestAnimationFrame(animate);
+            }
+        }
+
+        // Event listeners
+        canvas.addEventListener('click', (e) => {
+            if (!isGameRunning) return;
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            for (let i = 0; i < 5; i++) {
+                particles.push(new Particle(x, y));
+            }
+        });
+
+        document.getElementById('startGame').addEventListener('click', () => {
+            isGameRunning = true;
+            animate();
+        });
+
+        document.getElementById('resetGame').addEventListener('click', () => {
+            isGameRunning = false;
+            cancelAnimationFrame(animationId);
+            particles = [];
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+    </script>
+</body>
+</html> 
